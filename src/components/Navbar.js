@@ -3,13 +3,21 @@ import { Link } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
 import { GiAbstract024 } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import Button from "./Button";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => {
     setClick(!click);
   };
+
+  const closeMobileMenu = () => {
+    setClick(false);
+  };
+
   return (
     <>
       <div className="navbar">
